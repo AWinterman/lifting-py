@@ -1,4 +1,5 @@
 import psycopg2 as pg
+from datetime import datetime, MAXYEAR, MINYEAR
 from psycopg2 import extras as pg_extras
 
 from models import Session
@@ -37,15 +38,13 @@ class Storage:
         )
     """
 
-    SELECT_ALL = """
-        SELECT * FROM SESSIONS ORDER BY session_date;
+    SELECT_ALL_BY_DATE = """
+        SELECT * FROM SESSIONS WHERE session_date BETWEEN %s and %s ORDER BY session_date;
     """
 
     EXERCISES = """
-    SELECT DISTINCT exercise from sessions
+        SELECT DISTINCT exercise from sessions;
     """
-
-    
 
     def __init__(self, environ):
         dbname = environ['PG_DB_NAME']
@@ -68,10 +67,14 @@ class Storage:
 
         self.schema()
 
+    def all_exercises(self):
+        cursor = self.connection.cursor()
+        cursor.execute(self.EXERCISES)
+        return {e[0] for e in cursor}
+
     def schema(self):
         cursor = self.connection.cursor()
         cursor.execute(self.SCHEMA)
-        print(self.SCHEMA, cursor.statusmessage)
         self.connection.commit()
 
     def insert(self, session):
@@ -80,7 +83,7 @@ class Storage:
         cursor.execute(self.INSERT, session.to_sql())
         self.connection.commit()
 
-    def iterate(self, date=None):
+    def iterate(self, start_date=datetime(year=MINYEAR, month=1, day=1), end_date=datetime(year=MAXYEAR, month=1, day=1)):
         cursor = self.connection.cursor(cursor_factory=pg_extras.DictCursor)
-        cursor.execute(self.SELECT_ALL)
+        cursor.execute(self.SELECT_ALL_BY_DATE, (start_date, end_date,))
         return (Session(**k) for k in cursor)
