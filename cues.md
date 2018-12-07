@@ -2,6 +2,7 @@
 - stay over your feet
 - stay between the walls
 - exquisite tension
+- sit down and back
 
 # Swing
 - squat 

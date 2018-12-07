@@ -1,34 +1,34 @@
 Date	Exercise	SetsCompleted	Repetitions	Weight	Time	PerceivedEffort
-9/25/2018	BackSquat	3	5	155		
-9/25/2018	OverheadPress	3	5	95		
-9/25/2018	Deadlift	1	5	175		
-9/25/2018	Stepdowns	2	10			
-9/25/2018	HollowPullUp	2	5			
-9/25/2018	HollowPushUp	2	5			
-9/27/2018	KettlbellSnap	8	10	30	15:00	
-9/27/2018	GoaltyLeague	 	  	  	1:30:00	
-9/29/2018	BackSquat	3	5	160		
-9/29/2018	Overheadpress	3	5	95		
-9/29/2018	Deadlift	1	5	180		
-9/29/2018	Stepdowns	2	10			
-9/29/2018	HollowPullUps	2	5			
-9/29/2018	HollowPushUps	2	5			
-9/30/2018	Cardio/Recovery			1:00:00
-10/1/2018	TRXRoutine			20:00	
-10/2/2018	BackSquat	3	5	165		
-10/2/2018	OverheadPress	3	5	95		
-10/2/2018	Deadlift	1	5	185		
-10/2/2018	Stepdowns	2	10			
-10/2/2018	HollowPullUp	2	5			
-10/2/2018	HollowPushUp	2	5			
-10/4/2018	KettlebellSnap	10	10	25	15:00	
-10/6/2018	BackSquat	3	5	175		
-10/6/2018	OverheadPress 	3	5	97.5		
-10/6/2018	Deadlift 	1	5	190		
-10/6/2018	Stepdowns 	4	5			
-10/6/2018	HollowPushUp 	2	5			
-10/6/2018	HollowPullUp 	2	5			
-10/6/2018	CalfRaises 	3	15	35		
+9/25/2018	BackSquat	3	5	155
+9/25/2018	OverheadPress	3	5	95
+9/25/2018	Deadlift	1	5	175
+9/25/2018	Stepdowns	2	10
+9/25/2018	HollowPullUp	2	5
+9/25/2018	HollowPushUp	2	5
+9/27/2018	KettlbellSnap	8	10	30	15:00
+9/27/2018	GoaltyLeague	 	  	  	1:30:00
+9/29/2018	BackSquat	3	5	160
+9/29/2018	Overheadpress	3	5	95
+9/29/2018	Deadlift	1	5	180
+9/29/2018	Stepdowns	2	10
+9/29/2018	HollowPullUps	2	5
+9/29/2018	HollowPushUps	2	5
+9/30/2018	Cardio/Recovery				1:00:00
+10/1/2018	TRXRoutine				20:00
+10/2/2018	BackSquat	3	5	165
+10/2/2018	OverheadPress	3	5	95
+10/2/2018	Deadlift	1	5	185
+10/2/2018	Stepdowns	2	10
+10/2/2018	HollowPullUp	2	5
+10/2/2018	HollowPushUp	2	5
+10/4/2018	KettlebellSnap	10	10	25	15:00
+10/6/2018	BackSquat	3	5	175
+10/6/2018	OverheadPress 	3	5	97.5
+10/6/2018	Deadlift 	1	5	190
+10/6/2018	Stepdowns 	4	5
+10/6/2018	HollowPushUp 	2	5
+10/6/2018	HollowPullUp 	2	5
+10/6/2018	CalfRaises 	3	15	35
 10/9/2018	BackSquat	3	5	175		8
 10/9/2018	OverheadPress	3	5	97.5		8
 10/9/2018	Deadlift	2	5	190		6
@@ -36,7 +36,7 @@ Date	Exercise	SetsCompleted	Repetitions	Weight	Time	PerceivedEffort
 10/9/2018	HollowPullUp 	2	5			8
 10/9/2018	HollowPushUp 	2	5			5
 10/9/2018	CalfRaises 	3	5	40		8
-10/10/2018	TRXRoutine			16:00	6 	 	 	  		 
+10/10/2018	TRXRoutine				16:00	6
 10/10/2018	Kettlebell	10	10	25	11:00	6
 10/13/2018	BackSquat	3	5	175		5
 10/13/2018	OverheadPress	3	5	97.5		5
@@ -49,8 +49,8 @@ Date	Exercise	SetsCompleted	Repetitions	Weight	Time	PerceivedEffort
 10/16/2018	HollowPullUp 	2	5			 
 10/16/2018	HollowPushUp 	2	5			 
 10/16/2018	CalfRaises 	3	15	45		 
-10/17/2018	TRXRoutine			15:00	6  	 	  		 
-10/17/2018	Kettlebell	10	10	25	9:30	
+10/17/2018	TRXRoutine				15:00	6
+10/17/2018	Kettlebell	10	10	25	9:30
 10/19/2018	BackSquat	3	5	180		6
 10/19/2018	OverheadPress	3	5	100		8
 10/19/2018	Deadlift	2	5	200		8
@@ -103,7 +103,7 @@ Date	Exercise	SetsCompleted	Repetitions	Weight	Time	PerceivedEffort
 11/15/2018	HollowPullUp 	2	5			 
 11/15/2018	HollowPushUp 	2	5			 
 11/18/2018	TRXRoutine				14:00	 
-11/18/2018	Kettlebell	10	5	35		
+11/18/2018	Kettlebell	10	5	35
 11/20/2018	BackSquat	3	5	185		5
 11/20/2018	OverheadPress	3	5	105		7
 11/20/2018	Deadlift	2	5	210		5 
