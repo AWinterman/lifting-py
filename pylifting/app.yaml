@@ -1,0 +1,8 @@
+runtime: python37
+
+env_variables:
+    PG_HOST: '/cloudsql/lifting-224316:us-west1:lifting-pg'
+    PG_PASSWORD: "dXyJ0o1LWAGSEWv54nAZKK0yxaV0ExLLYsA9tqloCffPVUx4iH"
+    PROJECT_ID: "lifting-224316"
+    GCP_SERVICE_CREDS: "$HOME/lifting/local/lifting-2bf228fa90b8.json"
+    GCP_OAUTH_CLIENT_SECRET: "$HOME/lifting/local/client-secret.json"
