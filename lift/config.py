@@ -10,6 +10,7 @@ class Config:
         # When deployed to App Engine, the `GAE_ENV` environment variable will
         # be set to `standard`
         self.host = environ.get('PG_HOST', '127.0.0.1')
+        self.socket = environ.get("PG_SOCKET")
         self.port = environ.get('PG_PORT')
 
         # postgres ssl
@@ -34,6 +35,7 @@ class Config:
         user {}
         password {}
         host {}
+        socket {}
         port {}
         sslrootcert {}
         sslcert {}
@@ -46,6 +48,7 @@ class Config:
             self.user,
             self.password,
             self.host,
+            self.socket,
             self.port,
             self.sslrootcert,
             self.sslcert,

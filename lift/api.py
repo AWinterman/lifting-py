@@ -1,4 +1,4 @@
-from lift import core
+from lift.core import create as create_core
 from lift.util import validate_date
 from lift.models import Session as SessionModel
 
@@ -6,8 +6,8 @@ from flask import Flask
 from flask import request
 from flask import Response
 from flask import Blueprint
-# from flask import View
 from flask.views import MethodView
+from flask import g
 
 import functools
 import json
@@ -64,8 +64,9 @@ class Session(MethodView):
 
 
 api = Blueprint("api", __name__)
+core = create_core()
 
-session_view = Session.as_view("sessions", core.create())
+session_view = Session.as_view("sessions", core)
 # get a list of sessions
 api.add_url_rule(
     "/sessions/",
@@ -85,12 +86,12 @@ api.add_url_rule('/sessions/<string:date>', view_func=session_view,
 
 def app():
     from flask import Flask
-    print("running api only")
     app = Flask("api only")
     app.register_blueprint(api)
     return app
 
 
 if __name__ == "__main__":
+    print("running api only")
     app().run()
 

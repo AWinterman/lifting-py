@@ -54,7 +54,7 @@ def log(core, **kwargs):
         interactive = True
         params['exercise'] = click.prompt(
                 'enter an exercise (existing options: {})'.format(
-                    ', '.join(core.exercises)), str)
+                    ', '.join(core.all_exercises())), str)
 
     if interactive or ('session_date' not in params
                        or not params['session_date']):

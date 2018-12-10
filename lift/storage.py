@@ -22,6 +22,9 @@ class Storage(Config):
         if config.port:
             c['port'] = config.port
 
+        if config.socket:
+            c['query'] = {'unix_socket': config.socket}
+
         if config.sslrootcert and config.sslcert and config.sslkey:
             c['sslmode'] = 'verify-ca'
             c['sslrootcert'] = config.sslrootcert
@@ -29,11 +32,10 @@ class Storage(Config):
             c['sslkey'] = config.sslkey
 
         self.connection = pg.connect(**c)
-        self.exercises = self.all_exercises()
 
     def init_db(self):
-        self.connection.execute("DROP TABLE IF EXISTS sessions")
         self.schema()
+        self.exercises = self.all_exercises()
 
     DROP = """
         DROP TABLE IF EXISTS sessions;
@@ -54,15 +56,7 @@ class Storage(Config):
            weight decimal,
            duration interval,
            session_date date,
-           failure boolean default false,
-           user_id references users(id)
-        );
-
-        CREATE TABLE IF NOT EXISTS users (
-           id serial primary key,
-           name varchar,
-           email varchar,
-           birthday int,
+           failure boolean default false
         );
     """
 
