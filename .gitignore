@@ -1,4 +1,7 @@
 connect.sh
-pylifting/bin/
-pylifting/lib/
-pylifting/include/
+pylifting/bin
+pylifting/lib
+pylifting/build
+pylifting/dist
+pylifting/include
+*.egg-info
