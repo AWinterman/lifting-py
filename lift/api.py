@@ -7,12 +7,12 @@ from flask import request
 from flask import Response
 from flask import Blueprint
 from flask.views import MethodView
-from flask import g
 
 import functools
 import json
 
 JSON = 'application/json'
+
 
 def jsonify(call):
     @functools.wraps(jsonify)
@@ -51,7 +51,6 @@ class Session(MethodView):
         body = request.get_json()
         if not body:
             return ({'error': 'no body'}, 400)
-        
         response = []
         for b in body:
             d = {}
@@ -70,29 +69,26 @@ session_view = Session.as_view("sessions", core)
 # get a list of sessions
 api.add_url_rule(
     "/sessions/",
-     defaults={'date': None, 'id': None},
-     methods=["GET"],
-     view_func=session_view
+    defaults={'date': None, 'id': None},
+    methods=["GET"],
+    view_func=session_view
 )
 # get a single repetition by its id
 api.add_url_rule('/sessions/<int:id>', view_func=session_view,
                  methods=['GET'])
-# get what all the components of a single date    
+# get what all the components of a single date
 # add a single date
 api.add_url_rule('/sessions/<string:date>', view_func=session_view,
                  methods=['GET', 'POST'])
 
 
-
 def app():
-    from flask import Flask
+    core.init_db()
     app = Flask("api only")
     app.register_blueprint(api)
-    print 
     return app
 
 
 if __name__ == "__main__":
     print("running api only")
     app().run()
-
