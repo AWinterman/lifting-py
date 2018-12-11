@@ -1,0 +1,12 @@
+runtime: python37
+env_variables:
+    PG_HOST: /cloudsql/lifting-224316:us-west1:lifting-pg
+    PG_PASSWORD: TQHdMERxNES6x8yfimYBU4jiUWbY8hfB3f3fplgcVtfDZNif3N
+    PROJECT_ID: lifting-224316
+beta_settings:
+    cloud_sql_instance: /cloudsql/lifting-224316:us-west1:lifting-pg
+    
+#entrypoint: gunicorn -b :$PORT main.app
+handlers:
+- url: /
+  script: auto

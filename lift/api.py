@@ -88,6 +88,7 @@ def app():
     from flask import Flask
     app = Flask("api only")
     app.register_blueprint(api)
+    print 
     return app
 
 

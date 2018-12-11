@@ -1,6 +1,10 @@
-import psycopg2 as pg
 from datetime import datetime, MAXYEAR, MINYEAR
+import sys
+
+print(sys.path)
+
 from psycopg2 import extras as pg_extras
+import psycopg2 as pg
 
 from lift.models import Session
 from lift.config import Config
@@ -18,7 +22,7 @@ class Storage(Config):
         if config.password:
             c['password'] = config.password
         if config.host:
-            c['hostaddr'] = config.host
+            c['host'] = config.host
         if config.port:
             c['port'] = config.port
 
