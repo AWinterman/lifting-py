@@ -1,18 +1,9 @@
-from google.appengine.api import users
+import google.oauth2.id_token
+
+get_claims = google.oauth2.id_token.verify_firebase_token
+
 
 class Authnz:
-    def __init__(self):
-        pass
-
-    def check_logged_in(self):
-        """
-        Returns a tuple indicating whether the user is logged in, and the url to change that status.
-        """
-        user = users.get_current_user()
-        if user:
-            nickname = user.nickname()
-            logout_url = users.create_logout_url('/')
-            return True, logout_url,
-        else:
-            login_url = users.create_login_url('/')
-            return False, login_url,
+    def get_claims(self, authorization_header):
+            id_token = request.headers['Authorization'].split(' ').pop()
+            return self.get_claims(id_token, HTTP_REQUEST)

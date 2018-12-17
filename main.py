@@ -1,8 +1,6 @@
-from lift import api
+from lift.app import app
 
-application = api.app()
-app = api.app()
-api.
+application = app
 
 if __name__ == "__main__":
-    application.run()
+    app.run()

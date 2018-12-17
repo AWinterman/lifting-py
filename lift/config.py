@@ -26,34 +26,9 @@ class Config:
                 'https://www.googleapis.com/auth/drive.file'
         ).split(',')
 
+        self.service_credentials = environ.get('SERVICE_ACCOUNT_CREDENTIALS')
+
         print(self)
 
     def __str__(self):
-
-        return '''
-        dbname {}
-        user {}
-        password {}
-        host {}
-        socket {}
-        port {}
-        sslrootcert {}
-        sslcert {}
-        sslkey {}
-        gcp_service_key {}
-        oauth_secret {}
-        oauth_scope {}
-        '''.format(
-            self.dbname,
-            self.user,
-            self.password,
-            self.host,
-            self.socket,
-            self.port,
-            self.sslrootcert,
-            self.sslcert,
-            self.sslkey,
-            self.gcp_service_key,
-            self.oauth_secret,
-            self.oauth_scope,
-        )
+        return '\n'.join('%s %s' % item for item in vars(self).items())

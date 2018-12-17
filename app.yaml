@@ -9,5 +9,9 @@ beta_settings:
 #entrypoint: gunicorn -b :$PORT main.app
 handlers:
 - url: /*
-  login: required
   script: auto
+  login: required
+  secure: always
+
+automatic_scaling:
+  max_instances: 3

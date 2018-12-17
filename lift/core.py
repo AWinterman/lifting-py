@@ -2,7 +2,6 @@ from lift.storage import Storage
 from lift.exporter import GDocsExporter
 from lift.config import Config
 
-
 from os import environ
 
 

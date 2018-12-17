@@ -6,3 +6,4 @@ dist
 include
 *.egg-info
 .pytest*
+bower_components/

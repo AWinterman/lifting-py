@@ -1,5 +1,6 @@
 from datetime import date, datetime
 from collections import OrderedDict
+from itertools import groupby
 
 
 class Session:
@@ -44,6 +45,18 @@ class Session:
                 "session_date": self.session_date,
                 "failure": self.failure,
             } for i in range(self.sets if self.sets else 1))
+
+    @staticmethod
+    def from_sql(sql):
+        elements = sorted(sql)
+        for group in groupby(elements):
+            as_list = list(group)
+            if not as_list:
+                continue
+
+            d = {'sets', len(as_list)}
+            d.update(as_list[0])
+            yield Session(**d)
 
     def to_dict(self):
         d = OrderedDict({})
