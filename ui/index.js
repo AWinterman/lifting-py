@@ -1,5 +1,5 @@
-import firebase from "firebase/app"
-import "firebase/auth"
+import firebase from "@firebase/app"
+import "@firebase/auth"
 import React from "react"
 import ReactDOM from "react-dom"
 import Button from '@material-ui/core/Button'
