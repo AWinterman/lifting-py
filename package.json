@@ -1,0 +1,37 @@
+{
+  "name": "lifting",
+  "version": "1.0.0",
+  "description": "lifting man",
+  "main": "index.js",
+  "directories": {
+    "man": "man"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.6.2",
+    "firebase": "^5.7.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "start": "webpack -w --mode=development",
+    "serve": "gunicorn --reload main"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
